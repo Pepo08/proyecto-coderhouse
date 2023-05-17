@@ -3,8 +3,7 @@ header{
     border-bottom: 2px rgba(128, 128, 128, 0.5) solid;
     nav{
         div{
-            font-size: 35px;
-            margin-left: 30px;
+            padding-top: 5px;
             .navbar-brand{
                 font-size: 35px;
                 margin-left: 30px;
@@ -13,11 +12,11 @@ header{
                 span{
                     color: red;
                 }
+            }
             .navbar-collapse{
                 display: flex;
                 justify-content: end;
                 margin-right: 100px;
-                }
             }
         }
     }
