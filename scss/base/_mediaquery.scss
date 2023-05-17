@@ -1,0 +1,37 @@
+@media screen and (max-width: 500px) {
+    .bienvenidos .background-jordan{
+        background: none;
+        background-image: url(../img/jordans-fondo-500px.jpg);
+        background-repeat: none;
+        background-size: cover;
+        background-position: center;
+        height: 600px;
+    } 
+    .bienvenidos .background-jordan div{
+        width: 250px;
+        color: lightblue;
+        margin-left: 125px;
+        padding-top: 25px;
+    }
+}
+@media screen and (max-width: 1280px) {
+    .productos div:hover{
+        height: 500px;
+        width: 375px;
+        transition: 0s;
+        margin-right: 20px;
+        margin-bottom: 75px;
+    }
+    .bienvenidos div a:hover{
+        text-decoration: none;
+        padding: 20px;
+        font-size: 20px;
+        background-color: rgba(0, 110, 255, 0.4);
+        border:rgba(0, 110, 255, 1) 2px solid ;
+    }
+    .apartados-productos a:hover{
+        text-decoration: underline;
+        color: blueviolet;
+        font-size: large;
+    }
+}
