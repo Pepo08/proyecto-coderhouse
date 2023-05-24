@@ -6,7 +6,7 @@ header {
     padding-top: 5px; }
     header nav div .navbar-brand {
       font-size: 35px;
-      margin-left: 30px; }
+      margin-left: 10px; }
     header nav div a {
       margin-top: 5px;
       padding-left: 35px; }
@@ -69,7 +69,7 @@ section .nuestro-inv {
   font-size: 35px;
   text-decoration: none;
   display: flex;
-  justify-content: initial; }
+  justify-content: center; }
 
 .productos {
   display: grid;
@@ -89,7 +89,7 @@ section .nuestro-inv {
     grid-template-columns: 2;
     grid-template-rows: 2;
     grid-template-areas: "imagen titulo" "imagen descripcion";
-    width: 92%; }
+    width: 95.8%; }
     .productos div:hover img {
       width: 600px;
       height: 470px;
@@ -118,7 +118,7 @@ section .nuestro-inv {
     transition: 0.5s; }
 
 .apartados-productos {
-  margin-left: 75px;
+  margin-left: 50px;
   margin-bottom: 75px;
   font-size: 18px; }
   .apartados-productos a {
@@ -132,14 +132,13 @@ footer {
   footer h5 {
     margin-top: 20px;
     margin-bottom: 20px;
-    font-size: 17px;
-    margin-left: 75px; }
+    margin-left: 50px; }
   footer .ig {
-    margin-left: 75px; }
+    margin-left: 50px; }
   footer p {
     margin-top: 20px;
     margin-bottom: 25px;
-    margin-left: 75px; }
+    margin-left: 50px; }
 
 header nav ul {
   list-style: none; }
@@ -169,7 +168,6 @@ span {
 
 .todos-productos a div, .productos a div {
   margin-bottom: 75px;
-  margin-left: 75px;
   height: 500px;
   width: 375px;
   text-align: center;
@@ -199,6 +197,16 @@ span {
   margin-left: 30px;
   margin-right: 30px;
   border-top: 2px rgba(128, 128, 128, 0.5) solid; }
+
+.productos .a-izq {
+  display: flex;
+  justify-content: inital;
+  margin-left: 75px; }
+
+.productos .a-der {
+  display: flex;
+  justify-content: end;
+  margin-right: 75px; }
 
 /*-------FOOTER------*/
 footer {

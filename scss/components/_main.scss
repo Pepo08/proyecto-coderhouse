@@ -58,7 +58,7 @@ section{
     font-size: 35px;
     text-decoration: none;
     display: flex;
-    justify-content: initial;
+    justify-content: center;
 }
 .productos{
     display: grid;
@@ -84,7 +84,7 @@ section{
         "imagen titulo"
         "imagen descripcion"
         ;
-        width: 92%;
+        width: 95.8%;
         img{
             width: 600px;
             height: 470px;
@@ -121,7 +121,7 @@ section{
     }
 }
 .apartados-productos{
-    margin-left: 75px;
+    margin-left: 50px;
     margin-bottom: 75px;
     font-size: 18px;
     a{

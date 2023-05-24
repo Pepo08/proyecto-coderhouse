@@ -18,7 +18,6 @@ span{
 }
 %productos-div{
     margin-bottom: 75px;
-    margin-left: 75px;
     height: 500px;
     width: 375px;
     text-align: center;
@@ -49,7 +48,10 @@ span{
     margin-right: 30px;
     border-top: $border-separation $border solid;
 }
-
+@mixin a-lugar ($a){
+    display: flex;
+    justify-content: $a;
+}
 .todos-productos{
     a{
         div{
@@ -64,6 +66,14 @@ span{
     }
 }
 .productos{
+    .a-izq{
+        @include a-lugar(inital);
+        margin-left: 75px;
+    }
+    .a-der{
+        @include a-lugar(end);
+        margin-right: 75px;
+    }
     a{
         div{
             @extend %productos-div;
