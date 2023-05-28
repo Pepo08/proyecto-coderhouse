@@ -213,6 +213,41 @@ footer {
   border-top: 2px rgba(128, 128, 128, 0.5) solid; }
 
 @media screen and (max-width: 500px) {
+  .todos-productos a div:hover {
+    transform: none;
+    transition: none; }
+  .productos {
+    display: flex;
+    justify-content: center; }
+    .productos .a-izq {
+      margin-left: 0; }
+    .productos .a-der {
+      margin-right: 0; }
+    .productos a div:hover {
+      transition: none;
+      transform: none;
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-template-rows: none;
+      margin-left: 50px;
+      margin-right: 50px;
+      width: 80%; }
+      .productos a div:hover img {
+        width: 363px;
+        height: 65%;
+        grid-area: none;
+        transition: none;
+        position: relative;
+        transform: none; }
+      .productos a div:hover h3 {
+        grid-area: none;
+        transition: none;
+        transform: none; }
+      .productos a div:hover p {
+        grid-area: none;
+        transition: none;
+        border-top: none;
+        transform: none; }
   .bienvenidos {
     background: none;
     background-image: url(../img/jordans-fondo-500px.jpg);
@@ -224,60 +259,15 @@ footer {
       width: 250px;
       color: #4fc4eb;
       margin-left: 125px;
-      padding-top: 25px; } }
+      padding-top: 25px; }
+  .productos-para-vender {
+    text-align: center;
+    margin-left: 0; } }
 
 @media screen and (max-width: 1280px) {
   .todos-productos a div:hover {
     transform: none;
     transition: none; }
-  .productos a div {
-    transition: none; }
-    .productos a div img {
-      transition: none; }
-    .productos a div h3 {
-      transition: none; }
-    .productos a div p {
-      transition: none; }
-  .productos a div:hover {
-    margin-bottom: 75px;
-    margin-left: 75px;
-    height: 500px;
-    width: 375px;
-    display: grid;
-    grid-template-columns: 1;
-    grid-template-rows: 3;
-    grid-template-areas: "imagen" "titulo" "descripcion";
-    transition: none; }
-    .productos a div:hover img {
-      width: 363px;
-      padding: 0;
-      margin: 5px;
-      margin-bottom: 0;
-      height: 88%;
-      grid-area: imagen;
-      transition: none; }
-    .productos a div:hover h3 {
-      margin-top: 0px;
-      text-decoration: none;
-      color: black;
-      font-size: 22px;
-      font-family: 'Poppins', Light;
-      font-weight: 500;
-      grid-area: titulo;
-      transition: none; }
-    .productos a div:hover p {
-      display: inline-block;
-      font-size: 17px;
-      color: black;
-      text-decoration: none;
-      text-align: center;
-      padding-top: 15px;
-      margin-top: 8px;
-      margin-left: 30px;
-      margin-right: 30px;
-      border-top: 2px rgba(128, 128, 128, 0.5) solid;
-      grid-area: descripcion;
-      transition: none; }
   .bienvenidos .background-jordan a {
     text-decoration: none;
     color: white;
