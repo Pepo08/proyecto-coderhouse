@@ -26,6 +26,7 @@ span{
     -webkit-box-shadow: 6px 9px 9px 1px rgba(0,0,0,0.54);
     box-shadow: 6px 9px 9px 1px rgba(0,0,0,0.54);
     border: $border-div $border solid;
+    border-radius: 5px;
 }
 %productos-div-h3{
     margin-top: 20px;
