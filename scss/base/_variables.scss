@@ -27,6 +27,7 @@ span{
     box-shadow: 6px 9px 9px 1px rgba(0,0,0,0.54);
     border: $border-div $border solid;
     border-radius: 5px;
+    pointer-events: auto;
 }
 %productos-div-h3{
     margin-top: 20px;
@@ -34,7 +35,7 @@ span{
     color:black;
     font-size: 22px;
     font-family: 'Poppins', Light; 
-    font-weight: 500;
+    font-weight: 500; 
 }
 %productos-div-p{
     display: inline-block;
@@ -48,10 +49,6 @@ span{
     margin-left: 30px;
     margin-right: 30px;
     border-top: $border-separation $border solid;
-}
-@mixin a-lugar ($a){
-    display: flex;
-    justify-content: $a;
 }
 .todos-productos{
     a{
@@ -67,26 +64,19 @@ span{
     }
 }
 .productos{
-    .a-izq{
-        @include a-lugar(inital);
-        margin-left: 75px;
-    }
-    .a-der{
-        @include a-lugar(end);
-        margin-right: 75px;
-    }
-    a{
-        div{
-            @extend %productos-div;
-            h3{
-                @extend %productos-div-h3;
-            }
-            p{
-                @extend %productos-div-p;
-            }
+    display: flex;
+    justify-content: center;
+    div{
+        @extend %productos-div;
+        h3{
+            @extend %productos-div-h3;
+        }
+        p{
+            @extend %productos-div-p;
         }
     }
 }
+
 /*-------FOOTER------*/
 footer{
     border-top: $border-separation $border solid;
