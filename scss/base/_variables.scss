@@ -17,7 +17,6 @@ span{
     color: $color-web;
 }
 %productos-div{
-    margin-bottom: 75px;
     height: 500px;
     width: 375px;
     text-align: center;
@@ -53,6 +52,7 @@ span{
 .todos-productos{
     a{
         div{
+            margin-left: 25px;
             @extend %productos-div;
             h3{
                 @extend %productos-div-h3;

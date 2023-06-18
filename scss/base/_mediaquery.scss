@@ -1,6 +1,9 @@
 @media screen and (max-width: 500px) {
     .todos-productos {
         a{
+            div{
+                margin-left: 0;
+            }
             div:hover{
                 transform: none;
                 transition: none;

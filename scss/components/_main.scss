@@ -65,6 +65,8 @@ section{
     flex-direction: column;
     a{
         pointer-events: none;
+        height: 500px;
+        margin-bottom: 75px;
         div{
             img{
                 width: 363px;
@@ -109,6 +111,8 @@ section{
     justify-content: space-around;
     flex-wrap: wrap;
     a{
+        height: 500px;
+        margin-bottom: 75px;
         img{
             width: 360px;
             padding: 0;

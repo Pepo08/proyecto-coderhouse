@@ -75,7 +75,9 @@ section .nuestro-inv {
   align-items: center;
   flex-direction: column; }
   .productos a {
-    pointer-events: none; }
+    pointer-events: none;
+    height: 500px;
+    margin-bottom: 75px; }
     .productos a div img {
       width: 363px;
       padding: 0;
@@ -109,15 +111,18 @@ section .nuestro-inv {
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap; }
-  .todos-productos a img {
-    width: 360px;
-    padding: 0;
-    margin: 5px;
-    height: 65%;
-    border-radius: 5px; }
-  .todos-productos a div:hover {
-    transform: scale(1.05);
-    transition: 0.5s; }
+  .todos-productos a {
+    height: 500px;
+    margin-bottom: 75px; }
+    .todos-productos a img {
+      width: 360px;
+      padding: 0;
+      margin: 5px;
+      height: 65%;
+      border-radius: 5px; }
+    .todos-productos a div:hover {
+      transform: scale(1.05);
+      transition: 0.5s; }
 
 .apartados-productos {
   margin-left: 50px;
@@ -169,7 +174,6 @@ span {
   color: red; }
 
 .todos-productos a div, .productos div {
-  margin-bottom: 75px;
   height: 500px;
   width: 375px;
   text-align: center;
@@ -202,6 +206,9 @@ span {
   margin-right: 30px;
   border-top: 2px rgba(128, 128, 128, 0.5) solid; }
 
+.todos-productos a div {
+  margin-left: 25px; }
+
 .productos {
   display: flex;
   justify-content: center; }
@@ -211,6 +218,8 @@ footer {
   border-top: 2px rgba(128, 128, 128, 0.5) solid; }
 
 @media screen and (max-width: 500px) {
+  .todos-productos a div {
+    margin-left: 0; }
   .todos-productos a div:hover {
     transform: none;
     transition: none; }
