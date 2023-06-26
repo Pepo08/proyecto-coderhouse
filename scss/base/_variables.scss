@@ -27,6 +27,7 @@ span{
     border: $border-div $border solid;
     border-radius: 5px;
     pointer-events: auto;
+    margin-bottom: 25px;
 }
 %productos-div-h3{
     margin-top: 20px;
@@ -43,7 +44,7 @@ span{
     text-decoration: none;
     text-align: center;
     padding-top: 20px;
-    padding-top: 15px;
+    padding:15px;
     margin-top: 8px;
     margin-left: 30px;
     margin-right: 30px;
@@ -64,8 +65,6 @@ span{
     }
 }
 .productos{
-    display: flex;
-    justify-content: center;
     div{
         @extend %productos-div;
         h3{

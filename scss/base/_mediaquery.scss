@@ -1,25 +1,29 @@
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 1919px) {
     .todos-productos {
-        a{
             div{
-                margin-left: 0;
+                margin-left: 15px;
             }
             div:hover{
                 transform: none;
                 transition: none;
             }
         }
-    }
     .productos-para-vender{
         text-align: center;
         margin-left: 0;
     }
     .productos{
-        align-items: center;
+        display: flex;
+        justify-content: space-around;
+        flex-direction: row;
         a{
+            div{
+                margin-top: 50px;
+                margin-left: 15px;
+            }
             div:hover {
-                transform: none;
-                transition: none;
+                transform: scale(1.05);
+                transition: 0.5s;
                 display: grid;
                 grid-template-columns: initial;
                 grid-template-rows: initial;
@@ -49,6 +53,11 @@
             }
         }
     }
+    .nuestro-inv{
+        text-align: center;
+    }
+}
+@media screen and (max-width: 500px) {
     .background-jordan{
         background: none;
         background-image: url(../img/jordans-fondo-500px.jpg);
@@ -64,46 +73,21 @@
             h1{
                 margin-bottom: 150px;
             }
-        }
-    }
-    .nuestro-inv{
-        text-align: center;
-    }
-}
-@media screen and (max-width: 1280px) {
-    .todos-productos {
-        a{
-            div:hover{
-                transform: none;
-                transition: none;
-            }
-        }
-    }
-    .background-jordan{
-        .bienvenidos{
             a{
-                text-decoration: none;
-                color: white;
-                padding: 20px;
                 font-size: 20px;
-                background-color: rgba(0, 110, 255, 0.4);
-                border:rgba(0, 110, 255, 1) 2px solid ;
-                border-radius: 10px;
             }
             a:hover{
-                text-decoration: none;
-                color: white;
-                padding: 20px;
-                font-size: 20px;
-                background-color: rgba(0, 110, 255, 0.4);
-                border:rgba(0, 110, 255, 1) 2px solid ;
-                border-radius: 10px;
+                font-size: 25px;
             }
         }
     }
-    .apartados-productos a:hover{
-        text-decoration: underline;
-        color: blueviolet;
-        font-size: large;
+    .productos-para-vender{
+        text-align: center;
+        display: block;
+        margin-left:50px ;
+    }
+    .registramiento{
+        width: 100px;
+        border: 10px;
     }
 }

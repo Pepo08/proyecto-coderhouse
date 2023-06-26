@@ -1,27 +1,36 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;300&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Dongle&family=Poppins:wght@100;300&display=swap");
 header {
-  height: 100px; }
-  header nav div {
-    padding-top: 5px; }
-    header nav div .navbar-brand {
-      font-size: 35px;
-      margin-left: 10px; }
-    header nav div a {
-      margin-top: 5px;
-      padding-left: 35px; }
-    header nav div .navbar-collapse {
-      display: flex;
-      justify-content: end;
-      margin-right: 100px;
-      margin-top: 0px; }
+  height: 100px;
+  background-color: white; }
+  header .bg-body-tertiary {
+    --bs-bg-opacity: none;
+    background-color: rgba(var(--bs-tertiary-bg-rgb), var(--bs-bg-opacity)); }
+    header .bg-body-tertiary div {
+      padding-top: 8px; }
+      header .bg-body-tertiary div .navbar-brand {
+        font-size: 35px;
+        margin-left: 5px; }
+      header .bg-body-tertiary div a {
+        margin-top: 5px;
+        padding-left: 35px; }
+      header .bg-body-tertiary div .active {
+        margin-left: 45px; }
+      header .bg-body-tertiary div .navbar-text {
+        margin-right: 10px;
+        font-size: 20px;
+        color: black; }
+      header .bg-body-tertiary div .nav-item {
+        margin-left: 5px;
+        padding-top: 3px;
+        font-weight: 600;
+        font-size: 18px; }
 
-section .nuestro-inv {
+.nuestro-inv, .productos-para-vender {
   margin-left: 10px;
   margin-bottom: 50px;
   margin-top: 25px;
-  display: flex;
-  justify-content: center;
+  text-align: center;
   font-size: 35px; }
 
 .background-jordan {
@@ -62,18 +71,10 @@ section .nuestro-inv {
       transition: 0.5s;
       transform: scale(1.5); }
 
-.productos-para-vender {
-  margin-top: 50px;
-  margin-bottom: 50px;
-  font-size: 35px;
-  text-decoration: none;
-  display: flex;
-  justify-content: center; }
-
 .productos {
   flex-wrap: wrap;
-  align-items: center;
-  flex-direction: column; }
+  flex-direction: column;
+  align-items: center; }
   .productos a {
     pointer-events: none;
     height: 500px;
@@ -134,6 +135,61 @@ section .nuestro-inv {
     color: blue;
     text-decoration: underline; }
 
+section {
+  display: flex;
+  justify-content: center; }
+  section .registramiento {
+    margin-top: 100px;
+    height: 500px;
+    width: 500px;
+    display: flex;
+    border: 2px rgba(128, 128, 128, 0.5) solid;
+    display: flex;
+    flex-direction: column; }
+    section .registramiento h2 {
+      text-align: center;
+      margin-top: 50px;
+      font-size: 30px; }
+    section .registramiento .nombre {
+      margin-top: 50px; }
+    section .registramiento .nombre, section .registramiento .apellido, section .registramiento .email, section .registramiento .contrasena {
+      margin-left: 20px;
+      margin-bottom: 20px; }
+    section .registramiento .input {
+      width: 90%;
+      border-radius: 5px;
+      border: 2px rgba(0, 0, 255, 0.349) solid; }
+    section .registramiento p {
+      margin-left: 20px;
+      margin-top: 15px; }
+      section .registramiento p a {
+        text-decoration: underline; }
+    section .registramiento .enviar {
+      position: absolute;
+      margin-left: 400px;
+      margin-top: 10px; }
+
+.sobrenosotros {
+  margin-left: 10px;
+  margin-bottom: 5px;
+  margin-top: 25px;
+  text-align: center;
+  font-size: 35px; }
+
+.fundacion {
+  text-align: center;
+  font-size: 20px;
+  margin-bottom: 50px; }
+
+.texto-info {
+  font-size: large; }
+
+.h3-acercade, .texto-info {
+  margin-left: 10px; }
+
+.ultimo {
+  margin-bottom: 50px; }
+
 footer {
   flex-wrap: wrap; }
   footer h5 {
@@ -183,7 +239,8 @@ span {
   box-shadow: 6px 9px 9px 1px rgba(0, 0, 0, 0.54);
   border: 1px rgba(128, 128, 128, 0.5) solid;
   border-radius: 5px;
-  pointer-events: auto; }
+  pointer-events: auto;
+  margin-bottom: 25px; }
 
 .todos-productos a div h3, .productos div h3 {
   margin-top: 20px;
@@ -200,7 +257,7 @@ span {
   text-decoration: none;
   text-align: center;
   padding-top: 20px;
-  padding-top: 15px;
+  padding: 15px;
   margin-top: 8px;
   margin-left: 30px;
   margin-right: 30px;
@@ -209,28 +266,29 @@ span {
 .todos-productos a div {
   margin-left: 25px; }
 
-.productos {
-  display: flex;
-  justify-content: center; }
-
 /*-------FOOTER------*/
 footer {
   border-top: 2px rgba(128, 128, 128, 0.5) solid; }
 
-@media screen and (max-width: 500px) {
-  .todos-productos a div {
-    margin-left: 0; }
-  .todos-productos a div:hover {
+@media screen and (max-width: 1919px) {
+  .todos-productos div {
+    margin-left: 15px; }
+  .todos-productos div:hover {
     transform: none;
     transition: none; }
   .productos-para-vender {
     text-align: center;
     margin-left: 0; }
   .productos {
-    align-items: center; }
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row; }
+    .productos a div {
+      margin-top: 50px;
+      margin-left: 15px; }
     .productos a div:hover {
-      transform: none;
-      transition: none;
+      transform: scale(1.05);
+      transition: 0.5s;
       display: grid;
       grid-template-columns: initial;
       grid-template-rows: initial;
@@ -253,6 +311,10 @@ footer {
         grid-area: initial !important;
         transition: none !important;
         border-top: rgba(128, 128, 128, 0.5) 2px solid; }
+  .nuestro-inv {
+    text-align: center; } }
+
+@media screen and (max-width: 500px) {
   .background-jordan {
     background: none;
     background-image: url(../img/jordans-fondo-500px.jpg);
@@ -267,30 +329,14 @@ footer {
       margin-top: -100px; }
       .background-jordan .bienvenidos h1 {
         margin-bottom: 150px; }
-  .nuestro-inv {
-    text-align: center; } }
-
-@media screen and (max-width: 1280px) {
-  .todos-productos a div:hover {
-    transform: none;
-    transition: none; }
-  .background-jordan .bienvenidos a {
-    text-decoration: none;
-    color: white;
-    padding: 20px;
-    font-size: 20px;
-    background-color: rgba(0, 110, 255, 0.4);
-    border: #006eff 2px solid;
-    border-radius: 10px; }
-  .background-jordan .bienvenidos a:hover {
-    text-decoration: none;
-    color: white;
-    padding: 20px;
-    font-size: 20px;
-    background-color: rgba(0, 110, 255, 0.4);
-    border: #006eff 2px solid;
-    border-radius: 10px; }
-  .apartados-productos a:hover {
-    text-decoration: underline;
-    color: blueviolet;
-    font-size: large; } }
+      .background-jordan .bienvenidos a {
+        font-size: 20px; }
+      .background-jordan .bienvenidos a:hover {
+        font-size: 25px; }
+  .productos-para-vender {
+    text-align: center;
+    display: block;
+    margin-left: 50px; }
+  .registramiento {
+    width: 100px;
+    border: 10px; } }

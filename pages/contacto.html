@@ -1,90 +1,80 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device=width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
-    <meta name="keywords" content="air, jordans, jordan, airsjordan, zapatillas, botas, importaciones, importaciones, importaciones arg, diseños, outlet, casa de ropa">
+    <meta name="keywords"
+        content="air, jordans, jordan, airsjordan, zapatillas, botas, importaciones, importaciones, importaciones arg, diseños, outlet, casa de ropa">
     <meta name="description" content="Nosotros somos Air Jordans, una casa de zapatillas Jordans importadas directamente desde EEUU hasta Arg. Hechale un ojo y compra la que mas te guste, 
     suerte.">
     <link rel="stylesheet" href="../css/estilos.css">
     <title>Air Jordans | Nuestro contacto</title>
 </head>
-<body> 
+
+<body>
     <header>
-        <nav class="navbar navbar-expand-lg bg-body-white">
+        <nav class="navbar navbar-expand-lg bg-body-tertiary">
             <div class="container-fluid">
                 <a class="navbar-brand" href="../index.html"><span>A</span>ir <span>J</span>ordan</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText"
+                    aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-                <div class="collapse navbar-collapse" id="navbarNavDropdown">
-                    <ul class="navbar-nav">
-                        <li class="nav-item dropdown">
-                            <a class="nav-link nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                <img src="../img/icono_casa.png" alt="" width="30px" height="30px">
-                            </a>
-                            <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="../index.html">Home</a></li>
-                                <li><a class="dropdown-item" href="./masvendidas.html">Destacadas</a></li>
-                                <li><a class="dropdown-item" href="./productos.html">Nuestro inventario</a></li>
-                                <li><a class="dropdown-item" href="./acercade.html">Acerca de Nosotros</a></li>
-                                <li><a class="dropdown-item" href="./contacto.html">Contacto</a></li>
-                            </ul>
+                <div class="collapse navbar-collapse" id="navbarText">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="../index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./masvendidas.html">Destacadas</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./productos.html">Nuestro Inventario</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./acercade.html">Acerca de nosotros</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./contacto.html">Registrate</a>
                         </li>
                     </ul>
+                    <span class="navbar-text">
+                        Persigue tus sueños
+                    </span>
                 </div>
             </div>
         </nav>
     </header>
     <main>
         <section>
-            <form action="" method="" enctype="">
-                <div class="registramiento">
-                    <div>
-                        <h2>¡Registrate!</h2>
-                        <label for="nombre">Nombre:</label>
-                        <input type="text" name="nombre" id="nombre">
+            <div class="registramiento">
+                <h2>¡Registrate!</h2>
+                <form action="" method="" enctype="">
+                    <div class="nombre">
+                        <input type="text" name="nombre" placeholder="Nombre" class="input" required>
+                    </div>
+                    <div class="apellido">
+                        <input type="text" name="apellido" placeholder="Apellido" class="input" required>
+                    </div>
+                    <div class="email">
+                        <input type="email" name="email" placeholder="Email" class="input" required>
+                    </div>
+                    <div class="contrasena">
+                        <input type="password" name="contrasena" placeholder="Contraseña" class="input" required>
                     </div>
                     <div>
-                        <label for="apellido">Apellido:</label>
-                        <input type="text" name="apellido" id="apellido">
-                    </div>
-                    <div>
-                        <label for="email">Email:</label>
-                        <input type="email" name="email" id="email">
-                    </div>
-                    <div>
-                        <label for="contraseña">Contraseña:</label>
-                        <input type="password" name="contraseña" id="contraseña">
-                    </div>
-                </div>
-                    <div>
-                        <h3>Genero</h3>
-                        <label for="masculino">Masculino</label>
-                        <input type="radio" name="masculino" id="masculino">
-                        <label for="femenino">Femenino</label>
-                        <input type="radio" name="femenino" id="femenino">
-                        <label for="otro">Otro</label>
-                        <input type="radio" name="otro" id="otro">
-                        <label for="noidentificado">No identificado</label>
-                        <input type="radio" name="noidentificado" id="noidentificado">
+                        <input type="submit" name="enviar" class="enviar">
                     </div>
                 </form>
+                <p>¿Tienes una cuenta?<a href="">Inicio de sesion</a></p>
+            </div>
         </section>
         <div class="fixed">
             <img src="../img/whatsapp.png" alt="">
         </div>
     </main>
-    <footer>
-        <h5>Puedes seguirnos en estas redes</h5>
-        <img class="ig" src="../img/instagram.png" alt="Instragram">
-        <img src="../img/facebook.png" alt="Instragram">
-        <img src="../img/gorjeo.png" alt="Instragram">
-        <p>En estas redes vas a poder encontrar todas nuestras novedades mas recientes y importaciones que se vayan dando dentro de la actualidad, te recomendamos que nos vayas a seguir.
-</p>
-    </footer>
 </body>

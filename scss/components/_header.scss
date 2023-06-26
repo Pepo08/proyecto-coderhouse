@@ -1,21 +1,33 @@
 header{
     height: 100px;
-    nav{
+    background-color: white;
+    .bg-body-tertiary{
+        --bs-bg-opacity: none;
+        background-color: rgba(var(--bs-tertiary-bg-rgb),var(--bs-bg-opacity))
+        ;
         div{
-            padding-top: 5px;
+            padding-top: 8px;
             .navbar-brand{
                 font-size: 35px;
-                margin-left: 10px;
+                margin-left: 5px;
             }
             a{
                 margin-top: 5px;
                 padding-left: 35px;
             }
-            .navbar-collapse{
-                display: flex;
-                justify-content: end;
-                margin-right: 100px;
-                margin-top: 0px;
+            .active{
+                margin-left:45px;
+            }
+            .navbar-text{
+                margin-right: 10px;
+                font-size: 20px;
+                color: black;
+            }
+            .nav-item{
+                margin-left: 5px;
+                padding-top: 3px;
+                font-weight: 600;
+                font-size:18px;
             }
         }
     }
