@@ -29,6 +29,17 @@ header{
                 font-weight: 600;
                 font-size:18px;
             }
+            .carrito{
+                width: 60px;
+                height: 60px;
+                border: none;
+                background-color: white;
+                margin-right: 30px;
+                img{
+                    height: 40px;
+                    margin-bottom: 8px;
+                }
+            }
         }
     }
 }

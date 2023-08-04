@@ -104,12 +104,22 @@
     a{
         height: 500px;
         margin-bottom: 75px;
-        img{
+        .jordan{
             width: 360px;
             padding: 0;
             margin: 5px;
             height: 65%;
             border-radius: 5px;
+        }
+        .alcarrito{
+            width: 170px;
+            position: absolute;
+            border: none;
+            background-color: rgba(0, 0, 0, 0.850);
+            color: white;
+            border-radius: 15px;
+            margin-left: 105px;
+            margin-bottom: 200px;
         }
         div:hover{
             transform: scale(1.05);
@@ -191,4 +201,71 @@ section{
 }
 .ultimo{
     margin-bottom: 50px;
+}
+.modal-active {
+    visibility: visible;
+    z-index: 5;
+}
+.modal-carrito {
+    position: relative;
+    background-color: white;
+    min-width: 500px;
+    padding: 20px;
+    margin-top: -200%;
+    transition: all .5s;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
+}
+.modal-active .modal-carrito {
+    margin-top: 0;
+}
+.modal-carrito h3 {
+    color: rgb(225, 76, 65);
+    padding-bottom: 5px;
+}
+.modal-carrito #btn-cerrar-carrito {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    font-size: 20px;
+    color: rgb(225, 76, 65);
+    border: none;
+    background-color: white;
+}
+.modal-carrito #btn-cerrar-carrito:hover {
+    cursor: pointer;
+}
+.modal-carrito #btn-cerrar-carrito:focus {
+    outline: none;
+}
+.modal-carrito .producto-precio {
+    padding-top: 10px;
+}
+.card .card-image .card-title {
+    color: rgb(225, 76, 65);
+    position: unset
+}
+.productoEnCarrito {
+    border-left: 5px solid lightblue;
+    border-bottom-left-radius: 3px;
+    border-top-left-radius: 3px;
+    margin: 5px 0;
+    padding: 5px 10px;
+    display: flex;
+    justify-content: space-between;
+}
+.productoEnCarrito:hover {
+    border-left: 5px solid rgb(225, 76, 65);
+}
+.boton-eliminar {
+    background-color: white;
+    color: red;
+    border: none;
+    font-size: 20px;
+}
+.boton-eliminar:hover {
+    cursor: pointer;
+}
+.boton-eliminar:focus {
+    outline: none;
 }
