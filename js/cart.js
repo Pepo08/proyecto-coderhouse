@@ -10,19 +10,17 @@ productoContenedor.addEventListener('click', (e) => {
 
 const validarProductoEnCarrito = (id) => {
   const estaRepetido = carrito.some(producto => producto.id == id);
-  
+  const producto = productos.find(producto => producto.id == id);
   if (!estaRepetido) {
-    const producto = productos.find(producto => producto.id == id);
     carrito.push(producto);
     pintarProductoCarrito(producto);
   } else {
-    const producto = carrito.find(producto => producto.id == id);
     const cantidad = document.getElementById(`cantidad${producto.id}`);
     producto.cantidad++;
     cantidad.innerText = `Cantidad: ${producto.cantidad}`;
   }
 
-  saveProductStorage(producto);
+  guardarCarritoStorage(producto);
 };
 
 const pintarProductoCarrito = (producto) => {
@@ -87,3 +85,20 @@ const pintarTotalesCarrito = (totalCantidad, totalCompra) => {
   precioTotal.innerText = totalCompra
 }
 console.log(carrito);
+
+const guardarCarritoStorage = (carrito) => {
+  sessionStorage.setItem('carrito', JSON.stringify(carrito))
+}
+
+const obtenerCarritoStorage = () => {
+  const carritoStorage = JSON.parse(sessionStorage.getItem('carrito'))
+  return carritoStorage
+}
+
+const cargarCarrito = () => {
+  if (sessionStorage.getItem('carrito')) {
+      carrito = obtenerCarritoStorage()
+      pintarCarrito(carrito)
+      actualizarTotalesCarrito(carrito)
+  }
+}
