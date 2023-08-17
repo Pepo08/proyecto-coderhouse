@@ -20,7 +20,7 @@ const validarProductoEnCarrito = (id) => {
     cantidad.innerText = `Cantidad: ${producto.cantidad}`;
   }
 
-  guardarCarritoStorage(producto);
+  guardarCarritoStorage(carrito);
 };
 
 const pintarProductoCarrito = (producto) => {
@@ -41,6 +41,7 @@ const pintarProductoCarrito = (producto) => {
   botonEliminar.addEventListener('click', () => {
     eliminarProductoDelCarrito(producto.id);
     div.remove();
+    localStorage.removeItem("carrito", JSON.stringify(carrito.id))
   });
 
   contenedor.appendChild(div);
@@ -60,10 +61,12 @@ const pintarCarrito = (carrito) => {
     div.classList.add('productoEnCarrito')
 
     div.innerHTML = `
+      <button class="vaciarcarrito" value="confirm">Vaciar Carrito</button>
       <p>${producto.nombre}</p>
       <p>$ ${producto.precio}</p>
       <p id=cantidad${producto.id}>Cantidad: ${producto.cantidad}</p>
       <button class="btn waves-effect waves-ligth boton-eliminar" value="${producto.id}">X</button>
+      <button class="vaciarcarrito" value="confirm">Vaciar Carrito</button>
     `
     contenedor.appendChild(div)
   });
@@ -84,21 +87,16 @@ const pintarTotalesCarrito = (totalCantidad, totalCompra) => {
   contadorCarrito.innerText = totalCantidad
   precioTotal.innerText = totalCompra
 }
-console.log(carrito);
 
-const guardarCarritoStorage = (carrito) => {
-  sessionStorage.setItem('carrito', JSON.stringify(carrito))
-}
-
-const obtenerCarritoStorage = () => {
-  const carritoStorage = JSON.parse(sessionStorage.getItem('carrito'))
-  return carritoStorage
+const guardarCarritoStorage = () =>{
+  localStorage.setItem("carrito", JSON.stringify(carrito))
 }
 
 const cargarCarrito = () => {
-  if (sessionStorage.getItem('carrito')) {
-      carrito = obtenerCarritoStorage()
-      pintarCarrito(carrito)
-      actualizarTotalesCarrito(carrito)
-  }
+  if (localStorage.getItem('carrito') != 0) {
+      const carritoSorage = localStorage.getItem("carrito")
+      pintarProductoCarrito(carritoSorage)
+      actualizarTotalesCarrito(carritoSorage)
+  }else{}
 }
+

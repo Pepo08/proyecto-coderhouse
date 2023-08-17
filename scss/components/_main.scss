@@ -207,11 +207,10 @@ section{
     z-index: 5;
 }
 .modal-carrito {
-    position: relative;
+position: absolute;
     background-color: white;
-    min-width: 500px;
     padding: 20px;
-    margin-top: -200%;
+    width: 100%;
     transition: all .5s;
     border-radius: 10px;
     box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
@@ -268,4 +267,8 @@ section{
 }
 .boton-eliminar:focus {
     outline: none;
+}
+.vaciarcarrito{
+    margin-bottom: 10px;
+    height: 800px;
 }
