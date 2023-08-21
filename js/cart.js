@@ -5,6 +5,15 @@ const productoContenedor = document.querySelector(".todos-productos");
 productoContenedor.addEventListener('click', (e) => {
   if (e.target.classList.contains('agregar')) {
     validarProductoEnCarrito(e.target.id);
+    Toastify({
+      text: "El producto se agrego correctamente al carrito",
+      className: "notificacion",
+      gravity: "bottom",
+      position: "left",
+      style: {
+        background: "linear-gradient(to right, #00b09b, #96c93d)",
+      }
+    }).showToast();
   }
 });
 
@@ -39,9 +48,38 @@ const pintarProductoCarrito = (producto) => {
 
   const botonEliminar = div.querySelector('.boton-eliminar');
   botonEliminar.addEventListener('click', () => {
-    eliminarProductoDelCarrito(producto.id);
-    div.remove();
-    localStorage.removeItem("carrito", JSON.stringify(carrito.id))
+    const swalWithBootstrapButtons = Swal.mixin({
+      customClass: {
+        confirmButton: 'btn btn-success',
+        cancelButton: 'btn btn-danger'
+      },
+      buttonsStyling: false
+    })
+    
+    swalWithBootstrapButtons.fire({
+      title: "¿Estas seguro que queres eliminar este producto del carrito?",
+      text: "Si estas seguro toca aceptar y si no es asi toca cancelar",
+      icon: "warning",
+      showCancelButton: true,
+      confirmButtonText: "Aceptar",
+      cancelButtonText: "Cancelar",
+      reverseButtons: true
+    }).then((result) => {
+      if (result.isConfirmed) {
+        swalWithBootstrapButtons.fire(
+          "El producto Ha sido eliminado con exito",
+          eliminarProductoDelCarrito(producto.id),
+          div.remove(),
+          localStorage.removeItem("carrito", JSON.stringify(carrito.id))
+        );
+      } else if (
+        result.dismiss === Swal.DismissReason.cancel
+      ) {
+        swalWithBootstrapButtons.fire(
+          'El producto no se a retirado del carrito',
+        )
+      }
+    })
   });
 
   contenedor.appendChild(div);
@@ -99,4 +137,3 @@ const cargarCarrito = () => {
       actualizarTotalesCarrito(carritoSorage)
   }else{}
 }
-
