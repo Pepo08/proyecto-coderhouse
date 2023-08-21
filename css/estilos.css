@@ -283,6 +283,10 @@ section {
   margin-bottom: 10px;
   height: 800px; }
 
+.notificaion {
+  position: absolute;
+  margin-bottom: 0px; }
+
 footer {
   flex-wrap: wrap; }
   footer h5 {
