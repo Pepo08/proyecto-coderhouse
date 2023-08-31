@@ -1,6 +1,5 @@
 const pintarProductos = (data) => {
   const contenedor = document.querySelector(".todos-productos");
-
   data.forEach(productos => {
     const div = document.createElement("a"); 
     div.innerHTML += 
@@ -16,4 +15,5 @@ const pintarProductos = (data) => {
 };
 document.addEventListener("DOMContentLoaded", () => {
   pintarProductos(productos);
+  cargarCarrito();
 });

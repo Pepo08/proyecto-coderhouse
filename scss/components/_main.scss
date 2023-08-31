@@ -207,7 +207,7 @@ section{
     z-index: 5;
 }
 .modal-carrito {
-position: absolute;
+    position: absolute;
     background-color: white;
     padding: 20px;
     width: 100%;
@@ -220,14 +220,15 @@ position: absolute;
 }
 .modal-carrito h3 {
     color: rgb(225, 76, 65);
-    padding-bottom: 5px;
+    margin-top: 30px;
+    padding-bottom:10px ;
 }
 .modal-carrito #btn-cerrar-carrito {
     position: absolute;
-    top: 15px;
+    top: 22px;
     right: 15px;
     font-size: 20px;
-    color: rgb(225, 76, 65);
+    color: red;
     border: none;
     background-color: white;
 }
@@ -269,8 +270,20 @@ position: absolute;
     outline: none;
 }
 .vaciarcarrito{
-    margin-bottom: 10px;
-    height: 800px;
+    background-color: white;
+    color: black;
+    border: rgba(255, 0, 0, 0.800) 2px solid;
+    border-radius: 10px;
+    padding: 5px;
+    margin-left: 1050px;
+    position: absolute;
+}
+.vaciarcarrito:hover{
+    font-size: 18px;
+    transition: 0.25s;
+    background-color: rgba(255, 0, 0, 0.800);
+    color: white;
+
 }
 .notificaion{
     position: absolute;

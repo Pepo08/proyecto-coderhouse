@@ -1,5 +1,5 @@
 let carrito = []
-
+const carritoStorage = JSON.parse(localStorage.getItem("carrito")) || [];
 const productoContenedor = document.querySelector(".todos-productos");
 
 productoContenedor.addEventListener('click', (e) => {
@@ -48,6 +48,23 @@ const pintarProductoCarrito = (producto) => {
 
   const botonEliminar = div.querySelector('.boton-eliminar');
   botonEliminar.addEventListener('click', () => {
+    eliminarProductoDelCarrito()
+    div.remove()
+  });
+  contenedor.appendChild(div);
+};
+
+function eliminarProductoDelCarrito() {
+  carritoStorage = carritoStorage.filter(producto => producto.id !== id);
+  localStorage.setItem("carrito", JSON.stringify(carritoStorage));
+}
+
+const vaciarCarrito = () =>{localStorage.removeItem("carrito")}
+
+const pintarCarrito = (carrito) => {
+  const contenedor = document.getElementById('carrito-contenedor')
+  const botonVaciar = querySelector(".vaciarcarrito")
+  botonVaciar.addEventListener("click", () => {
     const swalWithBootstrapButtons = Swal.mixin({
       customClass: {
         confirmButton: 'btn btn-success',
@@ -55,7 +72,6 @@ const pintarProductoCarrito = (producto) => {
       },
       buttonsStyling: false
     })
-    
     swalWithBootstrapButtons.fire({
       title: "¿Estas seguro que queres eliminar este producto del carrito?",
       text: "Si estas seguro toca aceptar y si no es asi toca cancelar",
@@ -67,10 +83,10 @@ const pintarProductoCarrito = (producto) => {
     }).then((result) => {
       if (result.isConfirmed) {
         swalWithBootstrapButtons.fire(
-          "El producto Ha sido eliminado con exito",
+          "El producto ha sido eliminado con exito",
           eliminarProductoDelCarrito(producto.id),
           div.remove(),
-          localStorage.removeItem("carrito", JSON.stringify(carrito.id))
+          vaciarCarrito()
         );
       } else if (
         result.dismiss === Swal.DismissReason.cancel
@@ -80,33 +96,21 @@ const pintarProductoCarrito = (producto) => {
         )
       }
     })
-  });
-
-  contenedor.appendChild(div);
-};
-
-const eliminarProductoDelCarrito = (id) => {
-  carrito = carrito.filter(producto => producto.id !== id);
-};
-
-const pintarCarrito = (carrito) => {
-  const contenedor = document.getElementById('carrito-contenedor')
-
+  })
   contenedor.innerHTML = ''
-
   carrito.forEach(producto => {
     const div = document.createElement('div')
     div.classList.add('productoEnCarrito')
 
     div.innerHTML = `
-      <button class="vaciarcarrito" value="confirm">Vaciar Carrito</button>
       <p>${producto.nombre}</p>
       <p>$ ${producto.precio}</p>
       <p id=cantidad${producto.id}>Cantidad: ${producto.cantidad}</p>
       <button class="btn waves-effect waves-ligth boton-eliminar" value="${producto.id}">X</button>
-      <button class="vaciarcarrito" value="confirm">Vaciar Carrito</button>
     `
     contenedor.appendChild(div)
+
+
   });
 }
 
@@ -132,8 +136,7 @@ const guardarCarritoStorage = () =>{
 
 const cargarCarrito = () => {
   if (localStorage.getItem('carrito') != 0) {
-      const carritoSorage = localStorage.getItem("carrito")
-      pintarProductoCarrito(carritoSorage)
-      actualizarTotalesCarrito(carritoSorage)
+      pintarProductoCarrito(carritoStorage)
+      //actualizarTotalesCarrito(carritoStorage)
   }else{}
 }
